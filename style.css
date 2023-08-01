@@ -1,0 +1,75 @@
+
+/* Affichage.html, Crée 3 block avec une bordure */
+#aa, #bb, #cc {
+    border: 1px solid darkolivegreen;
+    height: 40px;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Deuxcolones.html, Deux colones transformer en Trois */
+.deux-colones {
+    column-count: 3; /* Crée 3 colones */
+    text-align: justify;
+    gap: 50px; /* Crée un espace entre les colones */
+}
+
+/* PosAlign.html, Image mi a droite par rapport au text. Alignement du texte par rapport a l'image.  */
+.pos-aligne {
+    float: left; /* image flottant a droite */
+    margin: 15px 15px 0 15px ;
+}
+
+/* Dégradé.html, crée des dégradé pour le fond  */
+.div {
+    width: 150px;
+    height: 120px;
+}
+
+#lineaire-simple {
+    background: linear-gradient(blue, pink);
+}
+
+#degrade-horizontale {
+    background: linear-gradient(to right, blue, pink) ;
+}
+
+#degrade-emplacement-auto {
+    background: linear-gradient(red, yellow, blue);
+}
+
+
+
+/* Marge.html, Les Marges */
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.madiv {
+    height: 500px;
+    border: 10px ridge rgb(162, 255, 0);
+    margin: 10%;
+    border-radius: 20px;
+}
+
+.men {
+    border: 5px ridge rgb(0, 217, 255);
+    border-radius: 10px;
+}
+
+.men:hover {
+    background-color: rgba(0, 238, 255, 0.39);
+}
+
+.li-marge {
+    display: inline-block;
+    margin: 0px 10px;
+    color: aliceblue;
+}
+
+.li-marge:hover {
+    background-color: rgba(240, 248, 255, 0.733);
+    color: #333;
+}
