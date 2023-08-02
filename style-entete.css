@@ -1,0 +1,24 @@
+#block-accueil { 
+    margin-right: 50px;
+    width: 100%;
+    display: flex;
+    /* border: solid; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.div-accueil {
+    width: 50%;
+    /* border: 1px solid red; */
+}
+#photo {
+    width: 25%;
+}
+#tt {
+    width: 70%;
+}
+#robot{
+    width: 100px;
+    border-radius: 50px;
+    float: right;
+}

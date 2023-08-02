@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: rgb(144, 255, 149);
+    background-image: url(https://img.freepik.com/photos-gratuite/garcon-regardant-lune-dans-nuit_1340-38945.jpg?w=1380&t=st=1690891969~exp=1690892569~hmac=09b41ead8b5a50c7bc98618541f8e08e8706181b18a0d48feba8703f740ea589);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: bolder;
+}
+
+/* <div id="conte"> contien tous le html de ma page */
+#conte {
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 100%;
+    margin: 3% 15% 0 15%;
+    border-radius: 20px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-image: linear-gradient(70deg,rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1));
+}
+
+
+/* .pp-img {
+    
+    height: 150px;
+    border-radius: 100%;
+    margin: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.438);
+} */
+
+h1 {
+    margin-left: 5%;
+}
+h1>a {
+    color: rgb(144, 255, 149);
+    text-decoration: none;
+    
+}
+
+.p {
+    margin-left: 15%;
+}
+
+.conteneur-acceuil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "un quatre"
+    "deux quatre"
+    "trois quatre";
+    padding: 10px 0 0 200px;
+}
+
+.un {
+    grid-area: un;
+}
+.deux {
+    grid-area: deux;
+}
+.trois {
+    grid-area: trois;
+    
+}
+.quatre {
+    grid-area: quatre;
+}
+
+fieldset {
+    border:none;
+    margin: 0;
+}
+legend {
+    position: relative;
+    left: 3%;
+}
+
+table {
+    width: 100%;
+    margin-left: 15%;
+    border-collapse: collapse;
+} 
+tr {
+    vertical-align: top;
+}
+
+.colone1 {
+    width: 200px;
+}
+/* .pp {
+    border: 2px solid greenyellow;
+    width: 50%;
+    height: 250px;
+    margin-left: 15%;
+    border-radius: 5px;
+    padding: 15px 0 0 15px; 
+} */
