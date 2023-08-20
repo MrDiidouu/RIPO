@@ -1,51 +1,67 @@
-
-body {
+* {
     margin: 0;
     padding: 0;
-    background-color: #333;
-    color: aliceblue;
 }
 
-#conte {
-    border: 1px solid red;
+body {
     width: 100%;
-    margin: 0 15% 0 15%;
+    height: auto;
+    background: linear-gradient(to bottom, rgba(0, 0, 0,0.3),rgba(0, 0, 0,0.05), rgba(255, 255, 255,0.1)), url(https://images3.alphacoders.com/132/1322308.jpeg) no-repeat center fixed; 
+    background-size: cover;
+    box-sizing: border-box;
+    /* border: groove greenyellow; */
 }
 
-.madiv {
-    height: 500px;
-    border: 10px ridge rgb(162, 255, 0);
-    margin: 10%;
-    border-radius: 20px;
+nav {
+    width: 100%;
+    /* border: solid red; */
+    position: sticky;
+    top: 0;
+    list-style-type: none;
+    text-align: center;
 }
 
-.men {
-    border: 5px ridge rgb(0, 217, 255);
-    border-radius: 10px;
+.menuderoulant ul{
+    display: none;  
 }
-
-.men:hover {
-    background-color: rgba(0, 238, 255, 0.39);
-}
-
-li {
+.menuderoulant li {
     display: inline-block;
-    margin: 0px 10px;
-    color: aliceblue;
+    position: relative;
 }
 
-li:hover {
-    background-color: rgba(240, 248, 255, 0.733);
-    color: #333;
+.menuderoulant a {
+    display: block;
+    width: 100%;
+    height: fit-content;  
+    /* border: solid green; */
+    color: rgba(0, 255, 42, 0.6);
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
 }
 
-.pp {
-    border: 2px solid greenyellow;
-    width: 50%;
-    height: 200px;
+.menuderoulant li:hover > ul {
+    display: block;
+    position: absolute;
+    top: relative;
+    left: relative;
+    /* border: solid blue; */
+    z-index: 100;
 }
+.menuderoulant li:hover {
+    color: rgb(0, 255, 42);
+    font-weight: bold;
 
-.pp-img {
-    float: right;
-    height: 150px;
+}
+h1 {
+    padding: 5px;
+    /* border: solid black;  */
+    width: fit-content;
+    margin: 0 auto;
+    background: url(https://images3.alphacoders.com/132/1322308.jpeg) no-repeat center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(239, 241, 236, 0.3); 
+    font-weight:  bolder;
 }
