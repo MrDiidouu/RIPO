@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TP_Menu_déroulant.css">
+    <!-- <link rel="stylesheet" href="TP_Menu_déroulant2.css"> -->
+    <title>Tp menu déroulant responsive</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Présentation</a>
+                    <ul class="premier">
+                        <li><a href="#">Chien</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Mouton</a></li>
+                        <li><a href="#">Licorne</a></li>
+                    </ul>
+                </li>
+                <li class="oiseaux" onmouseover="g()" onmouseout="g2()"><a href="#">Mille oiseaux</a>
+                    <ul class="deuxieme">
+                        <li><a href="#">Bœuf</a></li>
+                        <li><a href="#">Lièvre</a></li>
+                        <li><a href="#">Singe</a></li>
+                        <li><a href="#">Dragon</a></li>
+                        <li><a href="#">Rat</a></li>
+                        <li><a href="#">Coq</a></li>
+                        <li><a href="#">Bœuf</a></li>
+                        <li><a href="#">Serpent</a></li>
+                        <li><a href="#">Chien</a></li>
+                        <li><a href="#">Tigre</a></li>
+                        <li><a href="#">Singe</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+    function g(){
+        document.body.style.background="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGqSRzkJy8PWaRLxPhzuorY54Ez5HQzGdb0mGTPk0RAQ&s)";
+    }
+    function g2(){
+            document.body.style.background="white";
+        }
+    </script>
+</body>
+
+</html>

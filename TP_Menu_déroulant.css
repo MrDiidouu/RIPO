@@ -1,0 +1,107 @@
+body {
+    margin: auto;
+    padding: 0;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: rgb(0, 255, 8);
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    padding: 0;
+    float: left;
+    /* positionne le menu à gauche */
+    background-color: #333;
+    width: 300px;
+    text-align: center;
+    line-height: 40px;
+}
+
+header nav li a:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+header nav li a {
+    display: block;
+    /* L'ensemble du bloc a est coloré et non seulement le lien */
+}
+
+/* Disparition du sous-menu de la barre principale */
+
+header nav ul li ul li {
+    display: none;
+}
+
+/* Apparition du sous-menu au survol */
+header nav ul li:hover ul li {
+    display: block;
+}
+
+/* Ajout de vos règles @media */
+
+/* Styles pour les écrans de moins de 800px */
+@media only screen and (max-width: 799px) {
+    body {
+        background-color: black;
+        /* Ajoutez ici d'autres styles pour les écrans de moins de 799px si nécessaire */
+    }
+    /* Utilisation de sélecteurs plus spécifiques pour éviter toute ambiguïté */
+
+    header nav ul {
+        float: right;
+        position: relative;
+    }
+    header nav ul .premier{
+        position: absolute;
+        display: none;
+        left: 300px;
+        top: 40px;
+    }
+    header nav ul .deuxieme{
+        position: absolute;
+        display: none;
+        left: 300px;
+        top: 80px;
+    }
+    header nav ul li:hover ul{
+        display: block;        
+    }
+    
+    
+    
+    /* Réinitialisation de la position pour .placement */
+    .placement {
+        position: static;
+    }
+}
+
+/* Styles pour les écrans entre 800px et 966px */
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    body {
+        background-color: rgba(82, 82, 82, 0.467);
+        /* Ajoutez ici d'autres styles pour les écrans entre 800px et 966px si nécessaire */
+    }
+    
+    /* Réinitialisation de la position pour .recover */
+    .recover {
+        position: static;
+    }
+}
