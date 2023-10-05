@@ -1,67 +1,185 @@
-* {
+/* Commentor: Ce sélecteur applique le centrage du texte pour tous les éléments HTML. */
+
+
+/* Commentor: Les styles de base pour le corps de la page. */
+body {
+    /* font: normal 0.8em/1.5em Arial, Helvetica, sans-serif; */
+    /* background: url(https://wallpapercave.com/wp/wp8381878.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed; */
+    height: calc(100vh - 0px); /* Assurez-vous que cette ligne est nécessaire */
+    margin: 0;
+    /* color: #00ff37; */
+    /* text-align: center; */
+}
+header {
+    font: normal 0.8em/1.5em Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #00ff37;
+}
+
+/* Commentor: Définit le texte des légendes (figcaption) à s'aligner à gauche. */
+figcaption {
+    text-align: start;
+    
+}
+
+/* Commentor: Styles pour les éléments avec la classe "logo". */
+.logo {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Commentor: Styles pour les liens (a) dans le contenu. */
+a {
+    color: rgba(0, 0, 0, 0.95); /* Modifiez 'RGBa' en 'rgba' */
+}
+
+/* Commentor: Styles pour la barre de navigation (id "nav"). */
+#nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.80);
+    border-radius: 2em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.80);
+}
+
+/* Commentor: Styles pour les éléments de la liste (li) dans la barre de navigation. */
+#nav li {
+    margin: 0 5px;
+    padding: 0 0 8px;
+    float: left;
+    position: relative;
+    list-style: none;
+}
+
+/* Commentor: Styles pour les liens principaux (a) dans la barre de navigation. */
+#nav a {
+    font-weight: bold;
+    color: #00ff37;
+    text-decoration: none;
+    display: inline-block; /* Utilisez 'inline-block' pour les liens dans une barre de navigation */
+    padding: 8px 20px;
+    margin: 0;
+    border-radius: 1.6em; /* Vous pouvez simplifier en utilisant 'border-radius' sans préfixes de navigateur */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9); /* Ajustez la valeur d'opacité */
+}
+
+/* Commentor: Styles pour les liens principaux lors du survol. */
+#nav a:hover {
+    background: #000;
+    color: #00ff37;
+}
+
+/* Commentor: Styles pour les liens principaux actifs et les liens principaux lors du survol. */
+#nav .current a,
+#nav li:hover > a {
+    background: #00ff37;
+    color: rgba(0, 0, 0, 0.95);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Commentor: Styles pour les liens de sous-niveau (niveau 2) lors du survol. */
+#nav ul li:hover a,
+#nav li:hover li a {
+    background: none;
+    border: none;
+    color: #666;
+    box-shadow: none;
+}
+
+/* Commentor: Styles pour les liens de sous-niveau (niveau 3+) lors du survol. */
+#nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(0, 255, 34);
+    border-radius: 0; /* Utilisation de la propriété générique pour la bordure arrondie */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    /* Vous n'avez probablement pas besoin de !important ici, sauf si vous avez des spécificités de style conflictuelles */
+}
+
+/* Commentor: Affiche les sous-menus de la barre de navigation lors du survol. */
+#nav li:hover > ul {
+    display: block;
+}
+
+/* Commentor: Styles pour les sous-menus (niveau 2) de la barre de navigation. */
+#nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 185px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #ffffff;
+    border: solid 1px #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Commentor: Styles pour les éléments de liste (li) dans les sous-menus. */
+#nav ul li {
+    float: none;
     margin: 0;
     padding: 0;
 }
 
-body {
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to bottom, rgba(0, 0, 0,0.3),rgba(0, 0, 0,0.05), rgba(255, 255, 255,0.1)), url(https://images3.alphacoders.com/132/1322308.jpeg) no-repeat center fixed; 
-    background-size: cover;
-    box-sizing: border-box;
-    /* border: groove greenyellow; */
+/* Commentor: Styles pour les liens (a) dans les sous-menus. */
+#nav ul a {
+    font-weight: normal;
+    text-shadow: 0 1px 0 #fff;
 }
 
-nav {
-    width: 100%;
-    /* border: solid red; */
-    position: sticky;
-    top: 0;
-    list-style-type: none;
-    text-align: center;
+/* Commentor: Styles pour les sous-menus de niveau 3+ dans la barre de navigation. */
+#nav ul ul {
+    left: 181px;
+    top: -3px;
 }
 
-.menuderoulant ul{
-    display: none;  
-}
-.menuderoulant li {
-    display: inline-block;
-    position: relative;
+/* Commentor: Coins arrondis pour le premier et le dernier lien dans un sous-menu. */
+#nav ul li:first-child a {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
-.menuderoulant a {
+#nav ul li:last-child a {
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+/* Commentor: La règle suivante est utilisée pour gérer le clearfix dans la barre de navigation. */
+#nav:after {
+    content: ".";
     display: block;
-    width: 100%;
-    height: fit-content;  
-    /* border: solid green; */
-    color: rgba(0, 255, 42, 0.6);
-    text-decoration: none;
-    padding: 5px 10px 5px 10px;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+/* Commentor: Les règles suivantes modifient le comportement d'affichage de l'élément avec l'ID "nav". */
+
+#nav {
+    display: inline-block; /* L'élément avec l'ID "nav" est affiché en tant que bloc en ligne. */
 }
 
-.menuderoulant li:hover > ul {
-    display: block;
-    position: absolute;
-    top: relative;
-    left: relative;
-    /* border: solid blue; */
-    z-index: 100;
+/* Commentor: La règle suivante cible spécifiquement l'élément avec l'ID "nav" lorsque l'attribut "xmlns" est défini dans l'élément HTML. */
+html[xmlns] #nav {
+    display: block; /* Lorsque "xmlns" est défini dans l'élément HTML, l'élément avec l'ID "nav" est affiché en tant que bloc. */
 }
-.menuderoulant li:hover {
-    color: rgb(0, 255, 42);
-    font-weight: bold;
 
-}
-h1 {
-    padding: 5px;
-    /* border: solid black;  */
-    width: fit-content;
-    margin: 0 auto;
-    background: url(https://images3.alphacoders.com/132/1322308.jpeg) no-repeat center;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 1px rgba(239, 241, 236, 0.3); 
-    font-weight:  bolder;
+/* Commentor: La règle suivante cible spécifiquement l'élément avec l'ID "nav" dans les anciennes versions d'Internet Explorer (IE). */
+* html #nav {
+    height: 1%; /* Dans les anciennes versions d'IE, définir la hauteur à 1% pour résoudre des problèmes de mise en page. */
 }
