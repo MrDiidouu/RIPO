@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base SQL</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .page_in{
+            width: 40vw;
+            border: 1px solid black;
+            margin: 5px 0;
+            padding: 5px;
+            background-color: rgb(250, 250, 250);
+        }
+        button {
+            width: 17vw;
+            margin-bottom: 5px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 10px;
+        }
+        .vrai{
+            border: 2px solid rgb(0, 150, 35);
+        }
+    </style>
+</head>
+<body>
+    <header id="menu_site"></header>
+    <ul>
+        <li>
+            <h1>Base SQL</h1>
+            <ul>
+                <li>
+                    <h2>Sélection de données</h2>
+                    <ul>
+                        <li>
+                            <h3>Lignes et Colonnes</h3>
+                            <section class="page_in">
+                                <p>De nombreuses applications avec lesquelles vous interagissez stockent des données telles qu'un nom d'utilisateur, un mot de passe ou une liste d'amis</p>
+                                <p>Ce type de données vit dans une base de <strong>données</strong> . La plupart des bases de données sont des collections de <strong>tables</strong> stockant différents éléments de données .</p>
+                                <input type="email" placeholder="Email"><br>
+                                <input type="password" placeholder="Password"><br>
+                                <input type="button" value="LOG IN">
+                            </section>
+                            <section class="page_in">
+                                <p>Selon vous, quel type de données une application comme Mimo stocke ?</p>
+                                <button class="vrai">Des données telles que les noms des utilisateurs, les e-mails, la séquence active et la progression</button><br>
+                                <button class="faux">Des données comme les films préférés des utilisateurs</button>
+                            </section>
+                            <section class="page_in">
+                                <img src="https://previews.123rf.com/images/bakhtiarzein/bakhtiarzein1510/bakhtiarzein151000014/46569752-sql-structured-query-language-code-de-donn%C3%A9es-de-recherche-de-base-de-donn%C3%A9es-vecteur.jpg" alt="Base SQL recherche" width="100px">
+                                <p>SQL est un langage premettant de modifier, d'insérer et d'accéder aux données des tables d'une base de données.</p>
+                            </section>
+                            <section class="page_in">
+                                <p>Qu'est-ce que SQL ?</p>
+                                <button class="faux">Un langage de programmation que nous utilisons pour coder les interfaces des sites Web</button><br>
+                                <button class="vrai">Un langage de programmation que nous utilisons pour sélectionner, modifier et insérer des données dans des bases de données</button>
+                            </section>
+                            <section class="page_in">
+                                <p>Les tableaux sont comme des feuilles de calcul stockant des informations sur un type spécifique de données, comme ce tableau stockant les identifiants, noms et e-mails des utilisateurs.</p>
+
+                                <table border="black" width="400px">
+                                    <figcaption>Users</figcaption>
+                                    <tr bgcolor="#aeaeae">
+                                        <th>userID</th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>1</td>
+                                        <td>Sam</td>
+                                        <td>sam17@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>2</td>
+                                        <td>Remy</td>
+                                        <td>rem@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>3</td>
+                                        <td>Luis</td>
+                                        <td>luis_99@mail.com</td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <section class="page_in">
+                                <p>Chaque ligne d'un tableau représente un nouvel élément, comme la façon dont la première ligne contient des données sur l'ID, le nom et l'adresse e-mail d'un élément utilisateur.</p>
+
+                                <table border="black" width="400px">
+                                    <figcaption>Users</figcaption>
+                                    <tr bgcolor="#aeaeae">
+                                        <th>userID</th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>1</td>
+                                        <td>Sam</td>
+                                        <td>sam17@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>2</td>
+                                        <td>Remy</td>
+                                        <td>rem@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>3</td>
+                                        <td>Luis</td>
+                                        <td>luis_99@mail.com</td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <section class="page_in">
+                                <p>Si chaque ligne stocke un élément, combien d'éléments utilisateur cette table stocke-t-elle ?</p>
+
+                                <table border="black" width="400px">
+                                    <figcaption>Users</figcaption>
+                                    <tr bgcolor="#aeaeae">
+                                        <th>userID</th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>1</td>
+                                        <td>Sam</td>
+                                        <td>sam17@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>2</td>
+                                        <td>Remy</td>
+                                        <td>rem@mail.com</td>
+                                    </tr>
+                                    <tr bgcolor="#e6e6e6">
+                                        <td>3</td>
+                                        <td>Luis</td>
+                                        <td>luis_99@mail.com</td>
+                                    </tr>
+                                </table>
+                                <button class="faux">Nous ne pouvons pas savoir combien d'éléments utilisateur il stocke</button><br>
+                                <button class="vrai">Trois éléments utilisateur car </button>
+                            </section>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    
+    <!-- <pre>
+        <code>
+            SELECT * FROM "ID de la table" WHERE "NOM D'UNE AUTRE TABLE" != 10; /* https://prnt.sc/uuDgYW9CY1N3 */
+            SELECT * FROM "ID de la table" WHERE "NOM D'UNE AUTRE TABLE" BETWEEN 10 and 20; /* https://prnt.sc/viMoA6ny3-2P */
+            SELECT * FROM "ID de la table" WHERE "NOM D'UNE AUTRE TABLE" IN (6.8); /* https://prnt.sc/VjdtQeakPQkR */
+        </code> -->
+    </pre>
+    <script src="../Script_menu.js"></script>
+</body>
+</html>
