@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tp_form_13_10_2023.css">
+    <title>Formulaire de contact</title>
+</head>
+
+<body>
+    <div class="body">
+        <!-- <video autoplay loop muted plays-inline class="background-clip">
+            <source src="../Image/ninja_-_83274 (Original).mp4">
+        </video> -->
+        <h1>Formulaire de contact</h1>
+        <form name="contactForm" action="" onsubmit="return validerFormulaire();">
+            <fieldset class="form">
+                <legend>Contact</legend>
+                <div>
+                    <label for="Nom">Nom :</label>
+                    <input type="text" name="Nom" placeholder="Entrez votre nom !">
+                </div>
+                <div>
+                    <label for="Prénom">Prénom :</label>
+                    <input type="text" name="Prénom" placeholder="Entrez votre Prénom !">
+                </div>
+                <div>
+                    <label for="Mail">Mail :</label>
+                    <input type="email" name="Mail" placeholder="Entrez votre adresse !">
+                </div>
+                <div class="message">
+                    <label for="Message">Message :</label>
+                    <textarea name="Message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="conteneur">
+                    <div>
+                        <button id="submit">Submit</button>
+                    </div>
+                    <div>
+                        <button id="reset">Reset</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        document.getElementById("reset").addEventListener("click", function () {
+            document.forms["contactForm"]["Nom"].value = "";
+            document.forms["contactForm"]["Prénom"].value = "";
+            document.forms["contactForm"]["Mail"].value = "";
+            document.forms["contactForm"]["Message"].value = "";
+        });
+        // Fonction pour valider le formulaire
+        function validateForm() {
+            // Récupérer les valeurs des champs du formulaire
+            var nom = document.forms["contactForm"]["Nom"].value;
+            var prenom = document.forms["contactForm"]["Prénom"].value;
+            var mail = document.forms["contactForm"]["Mail"].value;
+            var message = document.forms["contactForm"]["Message"].value;
+
+            // Vérifier si l'un des champs est vide
+            if (nom === "" || prenom === "" || mail === "" || message === "") {
+                alert("Veuillez remplir tous les champs du formulaire !");
+                return false; // Empêcher la soumission du formulaire
+            } else {
+                alert("Votre formulaire a bien été envoyé.");
+                document.getElementById("contactForm").submit();
+            }
+        }
+
+        // Ajout de l'écouteur d'événement pour le bouton "Submit"
+        document.getElementById("submit").addEventListener("click", validateForm);
+
+        // Ajout de l'écouteur d'événement pour les champs de texte pour l'envoi avec "Entrée"
+        var inputFields = document.getElementsByTagName("input");
+        for (var i = 0; i < inputFields.length; i++) {
+            inputFields[i].addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    validateForm();
+                }
+            });
+        }
+
+         // Fonction pour changer le fond en fonction de la largeur de l'écran
+         function changeBackground() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                document.body.style.backgroundColor = "lightcoral"; // Changer le fond pour les écrans plus petits
+            } else {
+                document.body.style.backgroundColor = "lightblue"; // Fond par défaut
+            }
+        }
+
+        // Appeler la fonction lors du chargement de la page et lorsque la fenêtre est redimensionnée
+        window.addEventListener("load", changeBackground);
+        window.addEventListener("resize", changeBackground);
+
+    </script>
+</body>
+
+</html>
