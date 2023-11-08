@@ -67,7 +67,7 @@ a_Evenement_JS_Afpa.textContent = "ÉVénement JS";
 
 const li_Carousel_JS_Afpa = document.createElement('li');
 const a_Carousel_JS_Afpa = document.createElement('a');
-a_Carousel_JS_Afpa.setAttribute('href', 'https://diidou.web.app/Afpa/JavaScript/Carousel_responsive.html');
+a_Carousel_JS_Afpa.setAttribute('href', 'https://diidou.web.app/Afpa/JAVASCRIPT/Carousel_responsive.html');
 a_Carousel_JS_Afpa.textContent = "Carousel avec JS";
 
 
