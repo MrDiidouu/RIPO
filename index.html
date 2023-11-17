@@ -1,23 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../style.css">
-    <title>Menu burger</title>
+    <title>JavaScript</title>
 </head>
 <body>
-    <nav id="nav">
-        <h3>Mon Site &#9760;</h3>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Boutique</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div id="icons"></div>        
-    </nav>
-    <script src="script.js"></script>
+    <h1>JavaScript TP</h1>
+    <section class="Exercice1">
+        <h2>Q1: Variables et opérateurs</h2>
+        <h3>Additionne x et y, puis multiplie le résultat par 2</h3>
+        <form action="#" method="post">
+            <fieldset>
+                <label for="PremierChiffre">Premier Chiffre :</label>
+                <input type="text" id="Chiffre1" name="premierchiffre">
+
+                <label for="DeuxiemeChiffre">Deuxième Chiffre :</label>
+                <input type="text" id="Chiffre2" name="premierchiffre">
+                <p id="ResultatExo1"></p>
+            </fieldset>
+        </form>
+        <div class="conteneur_boutton">
+            <input type="button" value="Calculer" id="additionx2">
+        </div>        
+    </section>
+
+
+    <section class="Exercice2">
+        <h2>Q2: Structures de contrôle</h2>
+        <h3>Let num = 15</h3>
+        <h3>Vérifie si num est pair ou impair et affiche le résultat</h3>
+        <p id="Verif15"></p>
+        <form action="#" method="post">
+            <fieldset>
+                <label for="VerifPair">Choissisez le nombre à tester :</label>
+                <input type="text" id="VerifInput" name="veriftext">
+                <p id="ResultatVerif"></p>
+            </fieldset>
+        </form>
+        
+        
+        <div class="conteneur_boutton">
+            <input type="button" value="Vérification" id="Verif_pair_impair">
+        </div>        
+    </section>
+
+    
+    
+    <script src="Calcul_Simple.JS"></script> <!-- Exo1 -->
+    <script src="Verif_Pair_Impair.JS"></script> <!-- Exo2 -->
+    <script src="Exercice_3.JS"></script> <!-- Exo3 -->
+    <script src="Exercice_4.JS"></script> <!-- Exo4 -->
+    <script src="Exercice_5.JS"></script> <!-- Exo5 -->
+    <script src="Exercice_6.JS"></script> <!-- Exo6 -->
+    <script src="Exercice_7.JS"></script> <!-- Exo7 -->
+    <script src="Exercice_8.JS"></script> <!-- Exo8 -->
+    <script src="Exercice_9.JS"></script> <!-- Exo9 -->
 </body>
 </html>
