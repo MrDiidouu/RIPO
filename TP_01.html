@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .TP_01 h1,
+        .TP_02 h1,
+        .TP_03 h1,
+        .TP_04 h1,
+        .TP_05 h1,
+        .TP_06 h1,
+        .TP_07 h1,
+        .TP_08 h1,
+        .TP_09 h1,
+        .TP_10 h1:not(.h1),
+        .TP_11 h1,
+        .TP_12 h1,
+        .TP_13 h1,
+        .TP_14 h1,
+        .TP_15 h1,
+        .TP_16 h1,
+        .TP_17 h1,
+        .TP_18 h1,
+        .TP_19 h1,
+        .TP_20 h1,
+        .TP_21 h1,
+        .TP_22 h1,
+        .TP_23 h1, 
+        .TP_24 h1, 
+        .TP_25 h1,
+        .TP_26 h1,
+        .TP_27 h1,
+        .TP_28 h1,
+        .TP_29 h1,
+        .TP_30 h1,
+        .TP_31 h1 {
+            font-weight: 900;
+            background-color: #222 !important;
+            color: greenyellow;
+            text-align: center;
+        }
+        .TP_01,
+        .TP_02,
+        .TP_04,
+        .TP_06,
+        .TP_07,
+        .TP_08,
+        .TP_09,
+        .TP_11,
+        .TP_12,
+        .TP_13,
+        .TP_14,
+        .TP_17,
+        .TP_19,
+        .TP_21,
+        .TP_22,
+        .TP_23,
+        .TP_24,
+        .TP_25,
+        .TP_27,
+        .TP_28,
+        .TP_29,
+        .TP_30{
+            height: 200px;
+        }
+        .TP_05 {height: 250px;}
+        .TP_10, .TP_15, .TP_20, .TP_26 {height: 300px;}
+        .TP_11, .TP_16,.TP_18{height: 400px;}
+        .TP_12 {height: 600px;}
+
+
+
+        .TP_22 a,
+        .TP_21 a,
+        .TP_18 a,
+        .TP_15 a {
+            color: #222;
+        }
+        .TP_01 p,
+        .TP_02 p,
+        .TP_03 div {
+            width: 200px;
+        }
+        .TP_04 li,
+        .TP_06 li,
+        .TP_07 div,
+        .TP_08 p,
+        .TP_09 li,
+        .TP_12 .un,
+        .TP_13 li,
+        .TP_14 li,
+        .TP_16 div,
+        .TP_20 div {
+            width: 150px;
+        }
+
+        /* TP_01 */
+        .TP_01 p {
+            padding: 3px;
+        }
+
+        /* TP_02 */
+        .TP_02 p {
+            padding: 3px;
+        }
+
+        .TP_02 div {
+            padding: 3px;
+        }
+
+        .gras {
+            font-weight: bold;
+        }
+
+        /* TP_03 */
+        .TP_03 {
+            height: 500px;
+        }
+
+        .TP_03 span#box {
+            display: block;
+        }
+
+        .TP_03 div {
+            height: 100px;
+            margin: 5px;
+            float: left;
+            background: #eee;
+        }
+
+        .TP_03 p {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .TP_03 div span {
+            padding: 0 5px;
+        }
+
+        .green {
+            border: solid green;
+        }
+
+        /* TP_04 */
+        .TP_04 li {
+            margin-top: 5px;
+        }
+
+        /* TP_05 */
+        .TP_05 table {
+            width: 210px;
+            border-collapse: collapse;
+            border: 1px dashed #222;
+        }
+
+        .TP_05 td {
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+
+        /* TP_07 */
+
+        .TP_07 div {
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px double #222;
+        }
+
+        .TP_07 .arriereplan {
+            background-color: #222;
+            color: rgb(26, 255, 0);
+            font-weight: 900;
+            transform: scale(1.05);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        /* TP_08 */
+        .TP_08 p {
+            cursor: pointer;
+        }
+
+        .TP_08 .arriereplan {
+            background-color: #222;
+            color: rgb(26, 255, 0);
+            font-weight: 900;
+            transform: scale(1.05);
+            transition: 0.2s;
+        }
+
+        /* TP_10 */
+        .TP_10 .h1, h2, h3 {
+            margin: 3px 0;
+        }
+
+        /* TP_12 */
+        .TP_12 .un{
+            border: 1px dotted;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+        .TP_12 .deux{
+            width:  300px;
+            border:  1px solid black;
+            padding: 10px;
+            margin-bottom:  0px ;
+        }
+        
+
+        /* TP_13 */
+        .TP_13 .hidden {
+            display: none;
+        }
+        .TP_13 .conteneur{
+            width: 250px;
+            height: 150px;
+        }
+        .TP_13 div:not(.conteneur){
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #222;
+        }
+        .TP_13 li{
+            margin-top: 10px;
+        }
+        .TP_13 .italique {
+            font-style: italic;
+        }        
+
+        /* TP_14 */
+        .TP_14 li {
+            margin-top: 10px;
+        }
+        .TP_14 .italique {
+            font-style: italic;
+        }
+        
+
+        /* TP_15 */
+        .TP_15 div{
+            width: 255px;
+            padding: 3px;
+            border: 1px solid #222;
+        }
+        .TP_15 .cacher{
+            display: none;
+        }
+        
+
+        /* TP_16 */
+        .TP_16 div {
+            height: 150px;
+            border: solid #222;
+        }
+        
+
+        /* TP_17 */
+        .TP_17 table {
+            border-collapse: collapse;
+            border: 1px #222;
+        }
+        .TP_17 td {
+            text-align: center;
+            border: 1px solid #222;
+        }
+        
+
+        /* TP_20 */
+        .TP_20 div {
+            height: 18px;
+            border: 1px solid #222;
+        }
+
+        
+
+        /* TP_24 */
+        #boite1, #boite2 {
+            position: relative;
+            width: 80px;
+            height: 50px;
+            padding: 4px;
+            border: 2px solid #222;
+        }
+        #boite1 {
+            left: 20px;
+            top: 20px;
+            background: linear-gradient(135deg, #CB5EEE, #4BE1EC);
+        }
+        #boite2 {
+            left: 50px;
+            top: 0px;
+            background: linear-gradient(135deg, #4BE1EC, #CB5EEE);
+        }
+        .TP_24 p {
+            text-align: center;
+        }
+
+
+
+
+        /* TP_25 */
+        .TP_25 div {
+            position: relative;
+            width: 75px;
+            height: 75px;
+            border: 1px solid #222;
+            background: linear-gradient(135deg, #CB5EEE, #4BE1EC);
+        }
+
+
+
+        /* TP_26 */
+        .TP_26 div {
+            position: relative;
+            width: 250px;
+            height: 130px;
+            border: 1px solid #222;
+            margin-top: 10px;
+            padding: 3px;
+            font-size: 0.9em;
+            overflow: auto;
+        }
+        .TP_26 p {
+            margin: 2px;
+            width: 225px;
+            text-align: justify;
+        }
+
+
+
+        /* TP_27 */
+        .TP_27 p {
+            font-size: 1em;
+        }
+
+
+
+
+        /* TP_28 */
+        .TP_28{
+            height: 500px;
+            margin: 0;
+            padding: 10px;
+            font: 80% Arial, sans-serif;
+        }
+        .TP_28 h2 {
+            clear: both;
+            font-size: 160%;
+            font-weight: normal;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 15px;
+        }
+        .TP_28 a {
+            text-decoration: none;
+            color: #222;
+        }
+        .TP_28 img {
+            border: 1px solid #222;
+        }
+        .TP_28 ul,li {
+            list-style: none;
+            float: left;
+            display: inline;
+            margin-right: 10px;
+        }
+        #zoom {
+            position: absolute;
+            border: 1px solid #333;
+            background: #333;
+            padding: 3px;
+            display: none;
+            color: #fff;
+        }
+
+    </style>
+    <title>Jquery - TP</title>
+</head>
+
+<body>
+
+<!--*******************************************************************************
+
+
+                                                            HTML 
+
+
+**********************************************************************************-->
+    <!-- TP_01 -->
+    <div class="TP_01">
+        <h1>TP_01</h1>
+        <p>Paragraphe 1</p>
+        <p id="deux">Paragraphe 2</p>
+        <p>Paragraphe 3</p>
+    </div>
+
+    <!-- TP_02 -->
+    <div class="TP_02">
+        <h1>TP_02</h1>
+        <p>Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <p class="gras">Paragraphe 3</p>
+        <div>Division 1</div>
+    </div>
+
+    <!-- TP_03 -->
+    <div class="TP_03">
+        <h1>TP_03</h1>
+        <span id="box">
+            <div>&nbsp;</div>
+            <div>
+                <p> X <img src="https://lemagdesanimaux.ouest-france.fr/images/dossiers/2020-06/rouge-gorge-070157.jpg"
+                        alt="" width="500px"> X</p>
+            </div>
+            <div>
+                <p>Par <br><span>a</span><br>graphe</p>
+            </div>
+        </span>
+    </div>
+
+    <!-- TP_04 -->
+    <div class="TP_04">
+        <h1>TP_04</h1>
+        <li class="un">Element 1</li>
+        <li class="deux">Element 2</li>
+        <li class="trois">Element 3</li>
+        <li class="quatre">Element 4</li>
+        <li class="cinq">Element 5</li>
+    </div>
+
+    <!-- TP_05 -->
+    <div class="TP_05">
+        <h1>TP_05</h1>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TP_06 -->
+    <div class="TP_06">
+        <h1>TP_06</h1>
+        <div>1</div>
+        <div>2</div>
+        <ul>
+            <li>Liste 1</li>
+            <li>Liste 2</li>
+            <li>Liste 3</li>
+            <li>Liste 4</li>
+            <li>Liste 5</li>
+        </ul>
+    </div>
+
+    <!-- TP_07 -->
+    <div class="TP_07">
+        <h1>TP_07</h1>
+        <div>Important</div>
+        <div>Important</div>
+        <div>Important</div>
+    </div>
+
+    <!-- TP_08 -->
+    <div class="TP_08">
+        <h1>TP_08</h1>
+        <p>Paragraphe 1</p>
+        <p class="new">Nouveau paragraphe</p>
+        <p>Paragraphe 2</p>
+        <p class="new">Nouveau paragraphe</p>
+    </div>
+
+    <!-- TP_09 -->
+    <div class="TP_09">
+        <h1>TP_09</h1>
+        <li>element de liste 1</li>
+        <li>element de liste 2</li>
+        <li>element de liste 3</li>
+        <li>element de liste 4</li>
+        <li>element de liste 5</li>
+    </div>
+
+    <!-- TP_10 -->
+    <div class="TP_10">
+        <h1 class="h1_10">TP_10</h1>
+        <h1 class="h1"> titre de niveau 1</h1>
+        <p>contenue du programe</p>
+        <h2> titre de niveau 2</h2>
+        <p>contenue du programe 2</p>
+        <h3> titre de niveau 2</h3>
+        <p>contenue du programe 3</p>
+    </div>
+
+    <!-- TP_11 -->
+    <div class="TP_11">
+        <h1>TP_11</h1>
+        <ul>
+            <li>element de liste 1</li>
+            <li>element de liste 2</li>
+            <li>element de liste 3</li>
+            <li>element de liste 4</li>
+            <li>element de liste 5</li>
+        </ul>
+        <div>boite 1</div>
+        <div>boite 2</div>
+        <div>boite 3</div>
+        <div>boite 4</div>
+        <div>boite 5</div>
+        <p>
+            <a href="">liens 1</a><br>
+            <a href="">liens 2</a><br>
+            <a href="">liens 3</a><br>
+            <a href="">liens 4</a><br>
+            <a href="">liens 5</a><br>
+        </p>
+        <table>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td></td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TP_12 -->
+    <div class="TP_12">
+        <h1>TP_12</h1>
+
+        <h2>exercise 1</h2>
+        <p>
+            <a href="">liens 1</a>|<a href="">liens 2</a>|<a href="">liens 3</a>
+        </p>
+
+        <p class="un"><a href="">liens 1</a></p>
+
+        <p class="un"><a href="">liens 1</a>|<a href="">liens 2</a></p>
+
+        <p class="un"><a href="">a</a> | <a href="">5</a> </p>
+
+        <h2>exercise 2</h2>
+        <p class="deux">Quels librairie JS </p>
+        <p class="deux">dynamiser les site web</p>
+        <p class="deux">la syntaxe jQuery</p>
+
+        <h2>exercise 3</h2>
+        <p class="trois">la syntaxe jQuery  <a href="">lien</a></p>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_13 -->
+    <div class="TP_13">
+        <h1>TP_13</h1>
+        <div class="conteneur">
+            <p><button>Montre les boites &lt; div&gt; cachées</button></p>
+            <div class="box">&nbsp;</div>
+            <div class="hidden">&nbsp;</div>
+            <div class="box">&nbsp;</div>
+            <div class="box">&nbsp;</div>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- TP_14 -->
+    <div class="TP_14">
+        <h1>TP_14</h1>
+        <ul>
+            <li class="italique">Élément de liste 1</li>
+            <li class="italique">Élément de liste 2</li>
+            <li class="italique">Élément de liste 3</li>
+            <li class="italique">Élément de liste 4</li>
+            <li>Élément de liste 5</li>
+            <li class="rr">Élément de liste 6</li>
+            <li class="gras">Élément de liste 7</li>
+        </ul>
+    </div>
+    
+    
+
+
+    <!-- TP_15 -->
+    <div class="TP_15">
+        <h1>TP_15</h1>
+        <p><a href="#">Affiché / Masqué</a></p>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet velit exercitationem praesentium aperiam illum iure dolore maxime? Quaerat expedita, sunt aliquam quam enim magnam necessitatibus nam corporis commodi tempore dolorem?</div>
+        <p>Suite de la page</p>
+    </div>
+    
+    
+
+
+    <!-- TP_16 -->
+    <div class="TP_16">
+        <h1>TP_16</h1>
+        <p><button>Affiché le style css</button></p>
+        <p>jQuery est un framework <span style="font-style: italic;">JavaScript</span> Libre</p>
+        <p>Le style css de l'élement &lt;span&gt; est</p>
+        <div>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- TP_17 -->
+    <div class="TP_17">
+        <h1>TP_17</h1>
+        <p><button type="button">Agrandir le tableau</button></p>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+
+
+    <!-- TP_18-->
+    <div class="TP_18">
+        <h1>TP_18</h1>
+        <p><a href="#">Image suivante</a></p>
+        <div><img src="https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/2/9/e/29e68859e8_50182947_panneau-solaire-efficace-pas-cher.jpg" alt="panneau solaire" width="500px"></div>
+    </div>
+    
+    
+
+
+    <!-- TP_19 -->
+    <div class="TP_19">
+        <h1>TP_19</h1>
+        <p><a href="#">Sans style</a></p>
+        <div style="background-color: chartreuse; border: 2px solid #222; color: #222; font-weight: bold;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium iusto ea voluptates, eligendi recusandae iste nisi quasi temporibus ducimus pariatur accusantium quam sit provident, repellat modi deserunt quos reiciendis.</div>
+    </div>
+    
+    
+
+
+    <!-- TP_20 -->
+    <div class="TP_20">
+        <h1>TP_20</h1>
+        <p>Votre navigateur</p>
+        <form action="">
+            <input type="radio" name="1" value="edge">Edge<br>
+            <input type="radio" name="1" value="firefox">Firefox<br>
+            <input type="radio" name="1" value="safari">Safari<br>
+            <input type="radio" name="1" value="opera">Opera<br>
+            <input type="radio" name="1" value="chrome">Chrome<br>
+            <input type="radio" name="1" value="autre">Autre<br>
+        </form>
+        <p><button>Afficher votre choix</button></p>
+        <p>Votre choix est : </p>
+        <div></div>
+    </div>
+    
+    
+
+
+    <!-- TP_21 -->
+    <div class="TP_21">
+        <h1>TP_21</h1>
+        <form action="">
+            <p>mail : <input type="text" name="" id="input1"></p>
+            <p><input type="submit" id="soumettre" value="un seul envoie par utilisateur"></p>
+        </form>
+    </div>
+    
+    
+
+
+    <!-- TP_22 -->
+    <div class="TP_22">
+        <h1>TP_22</h1>
+        <form action="">
+            <input type="checkbox" checked="checked">
+            <p>&nbsp;</p>
+        </form>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_23 -->
+    <div class="TP_23">
+        <h1>TP_23</h1>
+        <p>Survolez ce texte avec le pointeur de la souris</p>
+        <p>Faites la mÃªme chose ici</p>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_24 -->
+    <div class="TP_24">
+        <h1>TP_24</h1>
+        <div id="boite1">
+            <p>z-index1</p>
+        </div>
+        <div id="boite2">
+            <p>z-index2</p>
+        </div>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_25 -->
+    <div class="TP_25">
+        <h1>TP_25</h1>
+        <div>&nbsp;</div>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_26 -->
+    <div class="TP_26">
+        <h1>TP_26</h1>
+        <button id="go">Aller au paragraphe 2</button>
+        <button id="reset">Revenir à l'affichage initial</button>
+        <div>
+            <p>
+                <strong>Paragraphe 1</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque suscipit sint illo laborum adipisci culpa aspernatur rem, temporibus, esse alias exercitationem cum inventore corrupti numquam quo tempora, ad quis ratione?
+            </p>
+            <p>
+                <strong>Paragraphe 1</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque suscipit sint illo laborum adipisci culpa aspernatur rem, temporibus, esse alias exercitationem cum inventore corrupti numquam quo tempora, ad quis ratione?
+            </p>
+        </div>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_27 -->
+    <div class="TP_27">
+        <h1>TP_27</h1>
+        <input type="button" value="Plus Grand" id="plus">
+        <input type="button" value="Plus Petit" id="moin">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti ipsa minus tempore enim distinctio alias at ipsam fuga tempora temporibus! Quaerat porro beatae similique numquam est accusantium veniam amet ab!</p>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_28 -->
+    <div class="TP_28">
+        <h1>TP_28</h1>
+        <h2>Effet zoom sur les images et <br>affichage des légendes</h2>
+        <ul>
+            <li><a href="Image-JQuery/pt_ours1.jpg" class="zoom" title="Ours polaire en danger"><img src="Image-JQuery/pt_ours1.jpg" alt="Ours en danger" width="250px" height="250px"></a></li>
+            <li><a href="Image-JQuery/pt_ours2.jpg" class="zoom" title="Ours polaire en danger"><img src="Image-JQuery/pt_ours2.jpg" alt="Ours en danger" width="150px" height="250px"></a></li>
+            <li><a href="Image-JQuery/pt_ours3.jpg" class="zoom" title="Ours polaire en danger"><img src="Image-JQuery/pt_ours3.jpg" alt="Ours en danger" width="250px" height="250px"></a></li>
+        </ul>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_29 -->
+    <div class="TP_29">
+        <h1>TP_29</h1>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_30 -->
+    <div class="TP_30">
+        <h1>TP_30</h1>
+    </div>
+    
+    
+    
+
+
+    <!-- TP_31 -->
+    <div class="TP_31">
+        <h1>TP_31</h1>
+    </div>
+    
+
+
+
+
+<!--*******************************************************************************
+
+
+                                                            SCRIPT 
+
+
+**********************************************************************************-->
+    <script>
+        // TP_01
+        $("document").ready(function () {
+            $("#deux").css("border", "1px solid #222");
+        });
+
+        // TP_02
+        $("document").ready(function () {
+            $(".TP_02 p").css("border", "1px solid #222");
+        });
+
+        // TP_03
+        $(document).ready(function () {
+            $("#box *").css("border", "2px dashed #222");
+            //$("#box > *").css("border", "2px dashed #222");            
+        });
+
+        // TP_04
+        $(document).ready(function () {
+            // $(".TP_04 li.un ~li").css("border"," 1px solid black")
+            //$(".TP_04 li.un ~~~li").css("border"," 1px solid black")
+            $(".TP_04 li.un+li").css("border", "2px double black")
+            $(".TP_04 .trois~").css("border", " 1px solid black")
+        });
+
+        //TP_05
+        $(document).ready(function () {
+            $(".TP_05 td:even").css("background", "#ccc"); // color le fond de tous les td impaires pour cette exemple
+            $(".TP_05 td:last").css("background", "#2df"); // color le fond du dernier emplacement la le dernier td
+            $(".TP_05 tr:odd").css("background", "#ff5733"); // color le fond de tous tr paire pour cette exemple
+            $(".TP_05 tr:first").css("background", "#9cf"); // color le fond du premier élement la le premier tr
+        });
+
+        //TP_06
+        $(document).ready(function () {
+            $(".TP_06 li:eq(1)").css("background", "orange");
+            $(".TP_06 li:gt(1)").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_06 div").eq(1).text("salut");
+            // $(".TP_06 div").get(0).text("Bonjour");
+        });
+
+        //TP_07
+        $(document).ready(function () {
+            $(".TP_07 div").mouseover(function () {
+                $(this).addClass("arriereplan");
+            });
+            $(".TP_07 div").mouseout(function () {
+                $(this).removeClass("arriereplan");
+            });
+        });
+
+        //TP_08
+        $(document).ready(function () {
+            $(".TP_08 p").mouseover(function () {
+                if ($(this).hasClass("new")) {
+                    $(this).addClass("arriereplan")
+                };
+            });
+        });
+
+        //TP_09
+        $(document).ready(function () {
+            $(".TP_09 li:lt(4)").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)")
+        });
+
+        //TP_10
+        $(document).ready(function () {
+            $(".TP_10 :header").css("background", "#800080");
+            $(".TP_10 :header:not(.h1_10)").css("color", "white");
+        });
+
+        //TP_11
+        $(document).ready(function () {
+            $(".TP_11 li:not(:first-child, :last-child)").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_11 li:not(:first-child, :last-child)").css("color", "beige");
+            $(".TP_11 div:nth-of-type(4)").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_11 div:nth-of-type(4)").css("color", "white");
+            $(".TP_11 p a:first-child").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_11 table tr:nth-child(odd)").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_11 table tr:nth-child(odd)").css("color", "white");
+            $(".TP_11 td:empty").css("background", "purple");
+        });
+
+        //TP_12
+        $(document).ready(function () {
+            $(".TP_12 .un  a:only-child").css("background","linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            $(".TP_12 .deux:contains(Que)").css("background","linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+            //$(".TP_12 .trois :has(a)").css("background","blue")//exercise 3
+        });
+
+        //TP_13
+        $(document).ready(function(){
+            $(".TP_13 button").click(function(){
+                $(".TP_13 div:hidden").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)").show()
+            });
+        });
+
+        //TP_14
+        $(document).ready(function(){
+            $(".TP_14 li[class]").css("border", "1px solid #222");
+            $(".TP_14 li[class='rr']").css("background", "linear-gradient(135deg, #CB5EEE, #4BE1EC)");
+        });
+
+        //TP_15
+        $(document).ready(function(){
+            $(".TP_15 a").click(function(){
+                $(".TP_15 div").toggleClass("cacher")
+            });
+        });
+        
+
+        //TP_16
+        $(document).ready(function(){
+            $(".TP_16 button").click(function(){
+                var styleçcss = $(".TP_16 span").attr("style");
+                $(".TP_16 div").text("style.css");
+            });
+        });
+        
+
+        //TP_17
+        $(document).ready(function(){
+            $(".TP_17 button").click(function(){
+                $(".TP_17 table").attr("width","240px");
+            })
+        });
+        
+
+        //TP_18
+        $(document).ready(function(){
+            $(".TP_18 a").click(function(){
+                $(".TP_18 img").attr({
+                    src: 'https://static.nationalgeographic.fr/files/styles/image_3200/public/iStock-586067948.jpg?w=1600&h=900',
+                    alt: 'Soleil',
+                    title: 'ecologie'
+                });
+            });
+        });
+        
+
+        //TP_19
+        $(document).ready(function(){
+            $(".TP_19 a").click(function(){
+                $(".TP_19 div").removeAttr("style");
+            });
+        });
+        
+
+        //TP_20
+        $(document).ready(function(){
+            $(".TP_20 button").click(function(){
+                var choix = $(".TP_20 input:checked").val()
+                $(".TP_20 div").text(choix)
+            });
+        });
+        
+
+        //TP_21
+        $(document).ready(function(){
+            $("#soumettre").click(function(){
+                event.preventDefault(); // Empêcher le comportement par défaut du formulaire
+                $("#soumettre").val("Vous avez déjà soumis");
+            });
+        });
+        
+
+        //TP_22
+        $(document).ready(function(){
+            $(".TP_22 input").change(function(){
+                var $input = $(this);
+                $(".TP_22 p").html("<b>Attribut</b> .attr(\"checked\"): <b>"+ $input.attr("checked") + "</b>.<br>" + "<b>Propriété</b> .prop(\"checked\"): <b>" +$input.prop("checked") + "</b>"
+                );
+            });
+        });
+
+
+
+        //TP_23
+        $(document).ready(function() {
+            $(".TP_23 p").mouseover(function() {
+                $(this).css({"background": "linear-gradient(135deg, #CB5EEE, #4BE1EC)", "font-style": "italic"});
+            });
+
+            $(".TP_23 p").mouseout(function(){
+                $(this).css({ "background-color": "", "font-style": "" });
+            });
+        });
+
+
+
+        // TP_24
+        $(document).ready(function () {
+            $("#boite1").mouseover(function () {
+                $(this).css("z-index", "10");
+            });
+            $("#boite2").mouseout(function () {
+                $(this).css("z-index", "");
+            });
+        });
+
+
+
+
+        //TP_25
+        $(document).ready(function () {
+            $(".TP_25 div").click(function () {
+                hauteur = $(this).height();
+                largeur = $(this).width();
+                $(this)
+                    .height(hauteur * 2)
+                    .width(largeur * 2 );
+            }) ;
+        });
+        
+
+        //TP_26
+        $(document).ready(function() {
+            $("#go").click(function(){
+                $(".TP_26 div").scrollTop(148);
+            });
+            $("#reset").click(function(){
+                $(".TP_26 div").scrollTop(0);
+            });
+        });
+        
+
+        //TP_27
+        $(document).ready(function() {
+            $(".TP_27 input").click(function(){
+                var texte = $(".TP_27 p");
+                var taille = texte.css('fontSize');
+                var nombre = parseFloat(taille, 10);
+                var unite = taille.slice(-2);
+                if(this.id == 'plus'){
+                    nombre *= 1.2;
+                }else if(this.id == 'moin') {
+                    nombre /= 1.2;
+                }
+                texte.css("fontSize", nombre + unite);
+            })
+        });
+    
+        
+
+        //TP_28
+            this.zoom_image = function () {
+                xOffset = 10;
+                yOffset = 30;
+                $(".TP_28 a.zoom").hover(
+                    function (e) {
+                    this.textes = this.title;
+                    this.title = "";
+                    var legende = this.textes != "" ? "<br />" + this.textes : "";
+                    $(".TP_28").append(
+                        "<p id='zoom'><img src=' "+this.href + " ' alt = 'visualisation image' />" + legende + "</p>" );
+                    $("#zoom")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left" , (e.pageX - yOffset) + "px")
+                        .fadeIn("Slow");
+                },
+                function(){
+                    this.title = this.textes;
+                    $("#zoom").remove();
+                });
+                $(".TP_28 a.zoom").mousemove(function(e){
+                    $("#zoom")
+                        .css("top",(e.pageY - xOffset) + "px")
+                        .css("left" , (e.pageX - yOffset) + "px")
+                });
+            };
+            $(document).ready(function(){
+                zoom_image();
+            });
+        
+        
+
+        //TP_25
+        $(document).ready(function() {});
+        
+
+        //TP_25
+        $(document).ready(function() {});
+
+
+    
+
+
+
+    </script>
+</body>
+
+</html>
