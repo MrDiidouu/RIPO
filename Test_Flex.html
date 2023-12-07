@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        .a{
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-            background-color: turquoise;
-        }
-        .b, .b1, .c, .c1, .d, .d1, .e, .e1, .f, .f1, .g, .g1, .h, .h1{
-            width: 50%;
-            height: 50%;
-        }
-        .b{background-color: red;}
-        .b1{background-color: blue;}
-        .c{background-color: yellow;}
-        .c1{background-color: green;}
-        .d{background-color: pink;}
-        .d1{background-color: purple;}
-        .e{background-color: orange;}
-        .e1{background-color: cyan;}
-        .f{background-color: white;}
-        .f1{background-color: grey;}
-        
-        
-    </style>
+    <link rel="stylesheet" href="Test_Flex.css">
+    <title>Flexbox test</title>
 </head>
+
 <body>
-  <div class="a">Je suis A
-    <div class="b1">Je suis B1</div>
-    <div class="b">Je suis B
-        <!-- <div class="c1">Je suis C1</div>
-        <div class="c">Je suis C -->
-            <!-- <div class="d1"></div>
-            <div class="d">
-                <div class="e1"></div>
-                <div class="e">
-                    <div class="f1"></div>
-                    <div class="f"></div>
+    <nav id="nav">
+        <ul id="ul">
+            <div class="groupement">
+                <li class="li1"><a href="">Premier li</a></li>
+                <li class="li2"><a href="">Deuxieme li</a></li>
+                <li class="li3"><a href="">Trois li</a></li>
+                <li class="li4"><a href="">Quatrième li</a></li>
+            </div>
+            <li class="droite">
+                <div class="Cnx-user">
+                    <form action="post" method="">
+                        <div class="placement">
+                            <input class="input_button" type="button" value="Se connecter">
+                            <input class="input_button" type="button" value="S'inscription">
+                        </div>
+                    </form>
                 </div>
-            </div> -->
-        </div>
-    </div>
-  </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const inputs = document.getElementsByClassName('input_button');
+
+        for (let i = 0; i < inputs.length; i++) {
+            const input = inputs[i];
+            const computedWidth = window.getComputedStyle(input).width;
+            input.style.width = `calc(${computedWidth} + 50px)`;
+        }
+
+    </script>
 </body>
+
 </html>
