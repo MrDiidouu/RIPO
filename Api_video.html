@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="../index.php">Accueil</a>
+    <a href="Api_html.html">Api html</a>
+    <a href="Api_Audio.html">Api Audio</a>
+    <div class="content">
+        <h1>LES API VIDEO</h1>
+        <!-- 
+            Intro
+            HTML5 fournit des éléments pour intégrer du multimédia dans les documents, à savoir les éléments <video> et <audio>. Ces éléments sont accompagnés d'une API javascript qui permet de contrôler la lecture, la recherche et d'autres aspects du contenu multimédia.
+
+                Les éléments <video> et <audio> sont utilisés pour intégrer des fichiers multimédias dans une page web. Ils ont des attributs similaires, notamment :
+                    * src= L'adresse du fichier multimédia
+                    * controls: Affiche ou non les contrôles de lecture par défaut du navigateur
+                    * autoplay: Lance automatiquement la lecture
+                    * loop: Fait boucler la lecture
+
+
+        -->
+        <video controls id="video" width="400" height="400"><!--Ajouter muted pour lancer en auto-->
+            <source src="Multimédia/anime_-_84574 (Original).mp4">
+        </video>
+        <div>
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <button id="mute">Mute</button>
+
+            <button id="av-rapide">Avancer</button>
+            <button id="re-rapide">Reculer</button>
+
+            <button id="fullscreen">Fullscreen</button>
+        </div>
+
+
+        <!--
+            L'API HTML fournit des méthode et propriétés pour contrôler la lecture, la recherche et d'autres aspects multimédia. Les éléments <video> et <audio> sont des instances de la classe HTMLMediaElement.
+                Voici quelque unes des méthodes et propiétés les plus courantes de HTMLMediaElement.
+                - play(): Lance la lecture
+                - pause(): Met en pause la lecture
+                - seekTo(temps): Cherche à une position donnée dans le contenu multimédia (temps en secondes)
+                - volume(): Définit le volume de la lecture
+                - muted(): Active ou Désactive le son
+        -->
+
+    </div>
+
+
+    <script>//JQUERY
+
+
+        var video = document.getElementById("video");
+        $("#play").on('click', function () { // lecture
+            $("#video").get(0).play();
+        });
+
+        $("#pause").on('click', function () { // pause
+            $("#video").trigger('pause');
+        });
+
+        $("#stop").on('click', function () { // Stop
+            $("#video").trigger('pause').prop("currentTime", 0);
+        });
+
+        $("#mute").on('click', function () { // Mute
+            video.muted = !video.muted;
+        });
+
+        $("#av-rapide").on('click', function () { // avancer
+            video.currentTime += 0.5;
+        });
+
+        $("#re-rapide").on('click', function () { // reculer
+            video.currentTime -= 0.5;
+        });
+
+
+        $("#fullscreen").on('click', function () { // Plein ecran
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
