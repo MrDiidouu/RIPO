@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="../index.php">Accueil</a>
+    <a href="Api_video.html">API Video</a>
+    <a href="Api_video.html">API HTML</a>
+    <div class="content">
+        <h1>LES API AUDIO</h1>
+    </div>
+
+
+
+    <audio id="audio" controls>
+        <source src="Multimédia/SURPRISE.mp3">
+    </audio>
+    <div>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
+        <button id="mute">Mute</button>
+
+        <button id="av-rapide">Avancer</button>
+        <button id="re-rapide">Reculer</button>
+
+    </div>
+    <script>
+        var audio = document.getElementById("audio");
+        $("#play").on('click', function () { // lecture
+            $("#audio").get(0).play();
+        });
+
+        $("#pause").on('click', function () { // pause
+            $("#audio").trigger('pause');
+        });
+
+        $("#stop").on('click', function () { // Stop
+            $("#audio").trigger('pause').prop("currentTime", 0);
+        });
+
+        $("#mute").on('click', function () { // Mute
+            audio.muted = !audio.muted;
+        });
+
+        $("#av-rapide").on('click', function () { // avancer
+            audio.currentTime += 0.5;
+        });
+
+        $("#re-rapide").on('click', function () { // reculer
+            audio.currentTime -= 0.5;
+        });
+
+
+    </script>
+</body>
+
+</html>
