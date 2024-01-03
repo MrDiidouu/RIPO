@@ -3,101 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma page</title>
+    <title>Tuto_PHP</title>
+    <style>
+        .navigation a{
+            font-size: 2.5rem;
+            color: black;
+            text-decoration: none;
+        }
+        .navigation ul{
+            display: flex;
+        }
+        .navigation li{
+            list-style-type: none;
+            padding: 0 18px;
+        }
+        .navigation .Tab {
+            position: relative;
+            top: 0px;
+            font-size: 2.563rem;
+        }
+        .navigation .Var {
+            position: relative;
+            top: 6.5px;
+
+        }
+        .navigation .Bou {
+            position: relative;
+            top: -8px;
+            font-size: 3.125rem;
+        }
+        /*
+        .navigation .hr1 {
+            position: relative;
+            width: 2000px;
+            height: 0px;
+            border: 1px solid black;
+            top: 38px;
+        }
+        .navigation .hr2 {
+            position: relative;
+            width: 2000px;
+            height: 0px;
+            border: 1px solid black;
+            top: 68px;
+        }
+        */
+
+    </style>
 </head>
 <body>
+    <header>
+        <nav class="navigation">
+        <!--
+            <hr class="hr1">
+            <hr class="hr2">
+        -->
+            <ul>
+                <li><a class="Tab" href="Tableau.php" title="Tableau">&#9783;</a></li>
+                <li><a class="Var" href="Variable.php" title="Variable">&#65284;</a></li>
+                <li><a class="Bou" href="Boucle.php" title="Boucle">&#10226;</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <h1>Exemple</h1>
+    <div>
     <?php 
-    include_once('entete.php');
-    ?>
-    <main class="content">
-        <h1>Voici mon contenu</h1>
-        <div class="pas_content">
-            <?php
-            //J'affiche le prénom
-            echo "Paul";
-            echo "<br>"; // je saute une ligne
-            echo "Ochon"; // j'affiche le nom
-            #ceci est aussi un commentaire
-            echo "<br> paul ochon";
-            /* Les commentaires vous aieront lorsque vous reviendrez
-            dans 6 mois et que vous aurez tout oublié */
-            echo "<br> super";
-            echo "<br>";
-            /* si vous souhaitez voir les caractères qui sont utilisés pour entourer les */
-            echo 'j\écris à l\'encre de chine ';
+        $prenom = 'Marc'; // Crée une variable prenom et lui affecte une valeur
+        echo $prenom ."<br>"; // Affiche la variable prenom
 
-            /* 
-            Le caractère anti-slash précède le 2ème apostrophe qui échappe ainsi à sa fonction naturelle qui est d'entourer des chaines de caractères. Dans le code ici, on met des guillemets au début et à la fin du texte et il n'est donc pas nécessaires d'échapper l'apostrophe. Par contre il faut échaper le guillemets du prénom.
-            */
-            echo "<br> j'envoie des lettres à \"dulcinée\"";
+        $note = 10; // Crée une variable note et lui affacte une valeur
+        $note2 = 15; // Crée une variable note2 et lui affacte une valeur
+        echo ($note + $note2) / 2 . "<br>"; // Affiche le résultats 
 
-            /*
-            Les variables,
-            une variables est un conteneur d'une donnée unique, c'est à dire une boite à chaussures qui ne contient qu'une seule chaussure.
-            Une variable contien une information temporaire qui peut-être numérique, de type alphabétique (chaine de caractère), de type date, de type objet ou d'autres types.
-                */
-            $largeur = 5;
-            echo $largeur;
+        $nom = 'Doe'; // Crée une variable nom et lui affecte une valeur
+        echo $prenom . ' ' . $nom . "<br>"; // Le point fait la concaténation des chaines de caractère
+        echo $prenom . "\n" . $nom. "<br>"; // Il y a une différence fondamentale entre '' et "" . Les guillemets simple (') ne vont jamais interpoler les variables qui sont a l'intérieur, seul les guillemets double(") sont capable de ça.
+        echo "$prenom \" $nom <br>"; // Si on veut échapper des guillemets double dans des guillemets double ou simple dans simple il faut forcément utilisé un antislash avant \"  .
 
-            /* 
-            Le nom d'une variable doit commencer par le caractère $ suivi d'une lettre ou un signe _ (barre du 8) et ne doit jamais commencer par un chiffre.Les noms des variables sont sensibles à la casse (majuscule/minuscule).
-            
-            Le signe = sert donc à affecter une valeur à la variable, il s'agit d'un opérateur d'affectation et non le signe égal que l'on utilise dans une opération de calcul
-            */
+        $booleenV = TRUE;
+        $booleenF = FALSE;
+        $booleenN = NULL; // Si on ne déclare pas de valeur a la variable par défauts elle sera null
+        echo $booleenN; // Afficher un echo null, c'est comme si on ne met rien.
 
-            $prenom = "téo";
-            $nom="durant";
-            $prenom_nom = $prenom." ".$nom;
-            echo '<br>'.$prenom_nom;
 
-            /**
-             * fonctions qui s'appliquent aux variables
-             * 
-             * strlen(variable): renvoie la longueur d'une chaine de caractère.
-             * subtr(variable, début, longueur): renvoie une partie de la chaine de caractères.
-             * trim(variable): supprime les espaces (ou d'autres caractères) en début et en fin de chaine.
-             * number_format(variable "point ou point virgule", "caractères pour les milliers").
-             * round(variable, nombre de décimale): arrondit le nombre.
-             * 
-            */
+    // Si on ne crée que du code php sur une page la balise fermante (? >) n'est pas obligatoire le code php se fermara tous seul a la dernière instruction ?>
 
-            $nom2 = "  MARIE ROSE  ";
-            echo strlen($nom2); //affiche 10 à cause des espaces
-            echo "<br>";
-            var_dump($nom2);// affiche string (10) "MARIE ROSE"
-            echo "<br>";
-            echo trim($nom2); // affiche MARIE ROSE sans espace
-            echo "<br>";
-            echo substr($nom2, 4, 6); //
-            echo "<br>";
-            echo $prix = 2050900.7854;
-            echo "<br>";
-            echo number_format($prix,2,","," ");// arrondit à la française
-            echo "<br>";
-            echo number_format($prix,2,"."," ");// affiche 2 050 900,79 en plaçant 2 décimales après un point et un espace comme séparateur de milliers.
-            echo "<br>";
-            echo round($prix,1); // arrondit à une décimale
-
-            //AFFECTATION DE VARIABLES PAR VALEUR OU PAR ALIAS
-
-            /**
-             * lorsqu'on affecte une donnée dans une variable, on dit qu'on affecte la variable par valeur. Toutefois, on pourrait aussi créer un alias à une autre variable. On dit parfois qu'on affecte la variable par référence.
-             * Pour créer un alias vers une autres variable, on utilise le signe & (et commercial ou esperluette). 
+    <h2>Exercice / Exemple</h2>
+    <div>
+        <?php 
+            $prenom1 = 'Marc';
+            $nom1 = 'Doe';
+            $note2 = 10;
+            $note3 = 20;
+            /* Il faut afficher
+                Bonjour Marc Doe vous avez eu 15 de moyenne 
              */
-            echo "<br>";
-            $v1 = "Jack Daniel's <br>";
-            $alias = &$v1; //crée un alias vers $v1
-            $alias = "Mon nom est $alias";
-            echo $alias;
 
-            $prenom2 = "Alain";
-            echo " Salut les gars mon nom est : " .$prenom2. " Delon";
+            // Pratique
+            // Première solution
+            echo 'Bonjour ' . $prenom1. ' ' . $nom1 . ' vous avez eu ' .(($note2 + $note3) / 2) . ' de moyenne'; 
 
-            ?>
-        </div>
-    </main>
-    <?php
-    include_once('footer.php');
-    ?>
+            // Deuxième solution
+            $moyenne = ($note2 + $note3) / 2;
+            echo "<br> Bonjour $prenom1 $nom1 vous avez eu $moyenne de moyenne";
+        ?>
+    </div>
 </body>
 </html>
