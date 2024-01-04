@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <!-- *****************************
+        *            Barre de navigation
+        *********************************** --> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="firstJS.html">Premier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="second.html">Deuxième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="troisieme.html">Troisième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="four.html">Quatrième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fifth.html">Cinquième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sixth.html">Sixième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="seventh.html">Septième</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="StockDurable.html">Stock durable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CookiePersistant.html">Cookie Persistant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LocalStorage.html">Local storage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="StockLocal.html">Stock Local</a>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+        <!-- *****************************
+        *           Fin de barre de navigation
+        *********************************** --> 
+
+        
+        <!--
+            L'objet localstorage
+            Les cookies ont été initialement conçus pour être transmis entre un client et un serveur. Ils ne se revèlent pas adaptés pour stocker et exploiter des informations coté client. Ainsi, la limitation de taille de 4ko est très pratique pour éviter que les requête qui contiennent les cookies sont trop volumineux mais limite les possibilités de stockage. 
+            HTML5 introduit une véritable manière de stocker l'information coté client: le localStorage. Ce dernier est un espace de stockage qui est associé à un domaine et qui est géré par le navigateur. Sa taille dépend de ce dernier et est d'au moins 5Mo, ce qui est assez consistant.
+            Contrairement aux cookies le localStorage n'est pas destiné a être envoyé vers le serveur.
+            Les seuls inconvénients du localStorage restent son incompatibilité avec les clients et appareils les plus anciens et sa dépendance au JavaScript. 
+            Le localStorage s'apparente à une base de données clef-valeur. Sa manipulation en JS est plus sophisiquée et offre d'avantage de fonctionnalités qu'un stockage d'informations dans un cookie.
+            Le localStorage se manipule grace à l'objet JavaScript du même nom.
+        -->
+        <script>
+            var date = new Date();
+            // La méthode setItem permet de stocker une paire clef-valeur dans le localStorage
+            var visite = localStorage.setItem("date", date.toString());
+            // La méthode getItem permet de trouver la valeur associée à une clef
+            var i = Number(localStorage.getItem("compteur"));
+            if (i === null) {
+                i = 0;
+            } else {
+                i++;
+            }
+            localStorage.setItem("compteur", i);
+
+            document.write("<h1> Vous avez visité cette page " + i + " fois </h1>");
+            document.write("dernière visite le : " + date);
+            /*
+                A la différence d'un cookie, il est possible de stocker des informations complexes dans le localStorage, à l'instar d'un objet...
+                Pour ce faire, il sera nécessaire de d'abord le convertir en une chaine de caractère ç l'aide de la méthodes JSON.stringify() pour pouvoir l'enregistrer. Pour le lire, il faut procéder à l'opération inverse à l'aide de la méthode JSON.parse() , qui permet de convertir une chaine de caractère en un objet.
+            */
+        </script>
+        <script>
+            /* 
+                Il est possible de stocker tout type d'information dans le localStorage, y compris des objets.
+                Il faut dans ce cas effectuer une conversion avant d'écrire ou de lire l'information.
+            */
+           var eleve = {
+            prenom : "Amina",
+            mail : "amina@gmail.com",
+            moyenne : 18
+           };
+           // Conversion de l'objet en texte
+           localStorage.setItem("obj", JSON.stringify(eleve));
+
+           var texte = localStorage.getItem("obj");
+
+           // Conversion du texte stocké en objet
+           texte = JSON.parse(texte);
+           alert(texte.mail);
+           console.log(texte.mail);
+        </script>
+</body>
+</html>
