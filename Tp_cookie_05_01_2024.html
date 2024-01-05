@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        div {
+            width: 60%;
+            height: 100px;
+            margin: 0 auto 20px auto;
+            padding: 2px 5px;
+            border: solid rgba(34, 34, 34, 0.3);
+            border-radius: 5px;
+            background: linear-gradient(135deg, #13e2da, #9055ff);
+            box-shadow: 0px 0px 10px 5px rgba(34, 34, 34, 0.5);
+        }
+
+        #france-verif-popup {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tp sur les cookies</h1>
+
+    <div>
+        <!-- Exercice 1 -->
+        <h2>Exercice 1</h2>
+        <p>
+            <label for="prenom">Entrez votre prénom : </label>
+            <input type="text" id="prenomInput">
+            <button id="creerCookie">Créer le Cookie</button>
+        </p>
+
+        <p id="affichageCookie"></p>
+    </div>
+
+
+
+    <div>
+        <!-- Exercice 2 -->
+        <h2>Exercice 2</h2>
+        <button id="suppressionCookie">Supprimer le Cookie</button>
+
+        <p id="affichageSuppression"></p>
+    </div>
+
+
+
+    <div>
+        <!-- Exercice 3 -->
+        <h2>Exercice 3</h2>
+        <p id="AffichageHeure"></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /* ******************************
+        *             Exercice 1
+        ****************************** */
+
+        // Fonction pour créer un cookie "prenom" avec la valeur saisie
+        function creerCookie() {
+            var prenomValue = document.getElementById("prenomInput").value;
+            document.cookie = "prenom=" + prenomValue;
+
+            // Lit la valeur du cookie "prenom"
+            var prenomCookie = document.cookie.replace(/(?:(?:^|.*;\s*)prenom\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+            // Affiche la valeur du cookie dans la console
+            console.log("La valeur du cookie 'prenom' est : " + prenomCookie);
+
+            // Affiche la valeur du cookie sur la page
+            document.getElementById("affichageCookie").innerText = "La valeur du cookie 'prenom' est : " + prenomCookie;
+        }
+
+        // Associe la fonction à l'événement click du bouton
+        document.getElementById("creerCookie").addEventListener("click", creerCookie);
+    </script>
+
+
+
+
+    <script>
+        /* ******************************
+        *             Exercice 2
+        ****************************** */
+        // Fonction pour supprimer le cookie "prenom" grace au bouton 
+        function suppressionCookie() {
+            // Supprime le cookie "prenom"
+            document.cookie = "prenom=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+
+            // Vérifier dans la console si le cookie "username" a été supprimé
+            console.log("Le cookie 'prenom' a été supprimé.");
+
+            // Affiche un message quand le cookie a été supprimer
+            document.getElementById("affichageSuppression").innerText = "Le cookie à bien été supprimer";
+        }
+        // Associe la fonction à l'événement click du bouton
+        document.getElementById("suppressionCookie").addEventListener("click", suppressionCookie);
+    </script>
+
+    <script>
+        // Création d'un cookie "sessionID" avec une durée de vie de 1 heure
+
+        // Création d'une nouvelle instance de Date pour définir l'heure d'expiration
+        var expirationTime = new Date();
+
+        // Calcul de la nouvelle heure en ajoutant 1 heure (60 minutes * 60 secondes * 1000 millisecondes) à l'heure actuelle
+        expirationTime.setTime(expirationTime.getTime() + 1000);
+
+        // Affichage de l'heure
+        document.getElementById("AffichageHeure").innerText = "Il est actuellement :" + expirationTime;
+
+        // Conversion de l'heure d'expiration en format UTC (Coordinated Universal Time)
+        // et assignation du cookie avec la clé "sessionID" et une valeur fictive "yourValue"
+        document.cookie = "sessionID=yourValue; expires=" + expirationTime.toUTCString();
+
+    </script>
+</body>
+
+</html>
